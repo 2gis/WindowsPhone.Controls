@@ -14,7 +14,7 @@
 * Visual Studio 2015 or higher
 * Windows Phone SDK 8.1
 
-You can get Visual Studio and SDK from Microsoft [here](https://dev.windows.com/en-us/develop/download-phone-sdk).
+You can get Visual Studio and SDK from Microsoft [here](https://dev.windows.com/en-us/downloads).
 
 ## Quick Start
 Just see TestApp for ProgressPathControl usage example.
