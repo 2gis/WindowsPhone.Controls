@@ -1,0 +1,80 @@
+﻿<Page x:Class="TestApp.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:controls="using:DoubleGis.WindowsPhone.Controls"
+      mc:Ignorable="d"
+      Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.Resources>
+
+        <DataTemplate x:Key="DoubleGisProgressTemplate">
+            <Path Data="M10.7,45.6C10,47.5,8.1,48.9,6,48.9c-2.8,0-5-2.2-5-5s2.2-5,5-5s5,2.2,5,5l0,0h30.3c0.1,0,0.2-0.1,0.2-0.2v-4c0-1.4,0.2-2.3,0.7-2.8c0.3-0.3,0.7-0.5,1.3-0.5H49c0.1,0,0.2-0.1,0.2-0.2v-3.6c0-1.4,0.2-2.3,0.7-2.8c0.3-0.3,0.8-0.5,1.3-0.5h3.5c0.1,0,0.2-0.1,0.2-0.2V14.7c0-2.1,0.4-3.1,1.4-3.3c0.1,0,0.3,0,0.5,0l0.2,0c3.4-0.5,3.6-4,3.6-9.6V0.6H63l0,1.1c0,5.4,0.2,9,3.8,9.6c0,0,0.1,0,0.1,0c0.1,0,0.2,0,0.3,0l0.1,0c1.5,0.4,1.5,2.7,1.5,3.4V29c0,0.1,0.1,0.2,0.3,0.2h3.2c0.6,0,1.1,0.2,1.5,0.6c0.5,0.6,0.8,1.5,0.8,2.7l0,10.6l0,0.4c0,0.1,0.1,0.2,0.2,0.2h16.6c2.4,0,2.8-2.1,3-4.3l0-3.6c0-0.1,0-0.1-0.1-0.2c0,0-0.1-0.1-0.2-0.1l-0.8,0c-3.6,0-6.1-2.3-6.1-5.6c0-1.8,0.9-3.7,2.3-4.7c0.1-0.1,0.1-0.1,0.1-0.2c-0.1-0.5-0.1-0.9-0.1-1.4c0-1.8,0.9-3.5,2.5-4.6c0.1,0,0.1-0.1,0.1-0.2c0-0.1,0-0.3,0-0.4c0-2,1.7-3.5,3.9-3.5c2.3,0,4.2,1.6,4.2,3.5c0,0.2,0,0.3,0,0.4c0,0.1,0,0.2,0.1,0.2c1.6,1.1,2.5,2.8,2.5,4.6c0,0.5,0,0.9-0.1,1.4c0,0.1,0,0.2,0.1,0.2c1.5,1.1,2.4,2.8,2.4,4.5c0,3.4-2.6,5.9-6.1,5.9l-1.2,0c-0.1,0-0.2,0.1-0.2,0.2l0,3.6c0.1,2.2,0.6,4.3,2.9,4.3h9.3c0.1,0,0.2-0.1,0.2-0.2v-2.1c0-1.3,0.2-2.2,0.7-2.7c0.3-0.3,0.7-0.4,1.2-0.4h2.5c1.9,0,1.9,2.3,1.9,3l0,2.2c0,0.1,0,0.1,0.1,0.2c0,0,0.1,0.1,0.2,0.1h2.5c0.1,0,0.1,0,0.2-0.1c0,0,0.1-0.1,0.1-0.2l0-2.2c0-0.7,0-3,1.9-3h2.5c0.5,0,0.9,0.1,1.2,0.4c0.5,0.5,0.7,1.3,0.7,2.7v2.1c0,0.1,0.1,0.2,0.2,0.2h2.5c0.1,0,0.2-0.2,0.2-0.3l0-2c0-1.3,0.2-2.2,0.7-2.7c0.3-0.3,0.7-0.4,1.2-0.4h2.5c0.5,0,0.9,0.1,1.2,0.4c0.5,0.5,0.7,1.3,0.7,2.7l0,0.4c0,0.1,0.1,0.2,0.2,0.2H148c0.1,0,0.2-0.1,0.2-0.3l0-4.6c0-1.5,0.2-2.5,0.7-3.1c0.3-0.3,0.8-0.5,1.3-0.5h2.2c0.1,0,0.2-0.1,0.2-0.2v-4.6c0-2.4,1.3-3.4,2.5-3.6c3.9-0.6,4.1-4.9,4-11.3l0-0.3l-0.5-2.4c0-0.1,0-0.1-0.1-0.1l-2-1.8l2.8-0.4c0.1,0,0.2-0.1,0.2-0.1l1.1-2.7l1.1,2.7c0,0.1,0.1,0.1,0.2,0.2l2.8,0.3l-2.2,1.9c0,0-0.1,0.1-0.1,0.1l-0.5,2.4c0,0,0,0,0,0.1l0,0.7c0,6.2,0.2,10.2,4.2,10.8c0.6,0.1,2.4,0.5,2.4,3.6v4.6c0,0.1,0.1,0.2,0.2,0.2h2.2c0.4,0,0.7,0.1,1,0.4c0.9,0.9,1,3.1,1,4.3v0.2c0,0.1,0.1,0.2,0.2,0.2h16.2c0.1,0,0.2-0.1,0.2-0.2c0-0.1,0-0.2-0.1-0.3c-1.1-0.8-2.5-1.9-3.6-3c-2.3-2.4-2.8-4.3-2.8-5.5c0-2.8,0.7-6,6-6c1.6,0,2.8,0.7,3.5,2c0.1,0.2,0.4,0.4,0.6,0.4c0.3,0,0.5-0.1,0.6-0.4c0.7-1.3,1.9-2,3.5-2c5.3,0,6,3.2,6,6c0,1.2-0.5,3-2.8,5.5c-1,1.1-2.5,2.2-3.6,3c-0.1,0.1-0.1,0.2-0.1,0.3c0,0.1,0.1,0.2,0.2,0.2l12.2,0c0.1,0,0.2-0.1,0.2-0.2l0-2.3c0.1-2.2,0.6-3.2,1.7-3.5l0.1,0l0.8-0.1c2.5-0.4,3.7-2.3,4-6.4l0-0.7h1.5l0.1,0.7c0.4,3.9,1.8,6,4.4,6.4l0.6,0.1l0.1,0c1.1,0.3,1.8,1.6,1.7,3.5v2.1c0,0.1,0.1,0.2,0.2,0.2h2.2c0.7,0,1.1,0.1,1.4,0.4c0.3,0.3,0.4,0.9,0.4,2.4c0,0,0,0,0,0.1l0,0.1l0,0.1c0,0.1,0.1,0.2,0.3,0.2h11c0.1,0,0.2-0.1,0.2-0.2l0-0.8c0-0.9,0.3-1.7,0.8-2.2c0.3-0.3,0.7-0.4,1.2-0.4c0,0,2.5,0,2.5,0c1.9,0,1.9,2.3,1.9,3l0,2.2c0,0.1,0,0.1,0.1,0.2c0,0,0.1,0.1,0.2,0.1h2.5c0.1,0,0.1,0,0.2-0.1c0,0,0.1-0.1,0.1-0.2l0-2.2c0-0.7,0-3,1.9-3h2.5c0.5,0,0.9,0.1,1.2,0.4c0.5,0.5,0.7,1.3,0.7,2.7v2.1c0,0.1,0.1,0.2,0.2,0.2h2.5c0.1,0,0.2-0.2,0.3-0.3l0-2c0-1.3,0.2-2.2,0.7-2.7c0.3-0.3,0.7-0.4,1.2-0.4h2.5c0.5,0,0.9,0.1,1.2,0.4c0.5,0.5,0.7,1.3,0.7,2.7v2.1c0,0.1,0.1,0.2,0.2,0.2h11.2l0.1,0c2.3-0.1,2.7-2.2,2.8-4.3l0-3.6c0-0.1-0.1-0.2-0.2-0.2c0,0-0.8,0-0.8,0c-3.6,0-6.1-2.3-6.1-5.6c0-1.8,0.9-3.7,2.3-4.7c0.1-0.1,0.1-0.1,0.1-0.2c-0.1-0.5-0.1-0.9-0.1-1.4c0-1.8,0.9-3.5,2.5-4.6c0.1,0,0.1-0.1,0.1-0.2c0-0.1,0-0.3,0-0.4c0-2,1.7-3.5,3.9-3.5c2.3,0,4.2,1.6,4.2,3.5c0,0.2,0,0.3,0,0.4c0,0.1,0,0.2,0.1,0.2c1.6,1.1,2.5,2.8,2.5,4.6c0,0.5,0,0.9-0.1,1.4c0,0.1,0,0.2,0.1,0.2c1.5,1.1,2.4,2.8,2.4,4.5c0,3.4-2.6,5.9-6.1,5.9l-1.2,0c-0.1,0-0.2,0.1-0.2,0.2l0,3.6c0.1,2.2,0.6,4.3,2.9,4.3H312l0,0.1c0,2.8,2.2,5,5,5c2.8,0,5-2.2,5-5s-2.2-5-5-5c-2.1,0-4,1.4-4.7,3.2"
+                  Height="50"
+                  StrokeDashCap="Flat"
+                  StrokeStartLineCap="Flat"
+                  StrokeEndLineCap="Flat"
+                  Stretch="None"
+                  Width="323" />
+        </DataTemplate>
+
+        <DataTemplate x:Key="ProgressRingBackgroundTemplate">
+            <Path Data="M124.5,62.5 C124.5,96.7417 96.7417,124.5 62.5,124.5 C28.2583,124.5 0.5,96.7417 0.5,62.5 C0.5,28.2583 28.2583,0.5 62.5,0.5 C96.7417,0.5 124.5,28.2583 124.5,62.5 z"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"
+                  Width="125"
+                  Height="125"
+                  Stretch="None"
+                  RenderTransformOrigin="0.5,0.5">
+                <Path.RenderTransform>
+                    <CompositeTransform Rotation="-90" />
+                </Path.RenderTransform>
+            </Path>
+        </DataTemplate>
+
+        <DataTemplate x:Key="ProgressRingForegroundTemplate">
+            <Path Data="M120,62.5 C120,94.2564 94.2564,120 62.5,120 C30.7436,120 5,94.2564 5,62.5 C5,30.7436 30.7436,5 62.5,5 C94.2564,5 120,30.7436 120,62.5 z"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"
+                  Width="125"
+                  Height="125"
+                  Stretch="None"
+                  RenderTransformOrigin="0.5,0.5">
+                <Path.RenderTransform>
+                    <CompositeTransform Rotation="-90" />
+                </Path.RenderTransform>
+            </Path>
+        </DataTemplate>
+    </Page.Resources>
+
+    <StackPanel>
+        <controls:ProgressPathControl x:Name="DoubleGisProgress"
+                                      ProgressPathBackgroundTemplate="{StaticResource DoubleGisProgressTemplate}"
+                                      ProgressPathForegroundTemplate="{StaticResource DoubleGisProgressTemplate}"
+                                      BackgroundProgressPathStrokeThickness="1"
+                                      ForegroundProgressPathStrokeThickness="2"
+                                      IsAnimationEnabled="True"
+                                      Background="Gray"
+                                      Foreground="#FF8DD2EF"
+                                      Progress="0"
+                                      Margin="20" />
+
+        <controls:ProgressPathControl x:Name="ProgressRing"
+                                      ProgressPathBackgroundTemplate="{StaticResource ProgressRingBackgroundTemplate}"
+                                      ProgressPathForegroundTemplate="{StaticResource ProgressRingForegroundTemplate}"
+                                      BackgroundProgressPathStrokeThickness="1"
+                                      ForegroundProgressPathStrokeThickness="10"
+                                      IsAnimationEnabled="False"
+                                      Background="Gray"
+                                      Foreground="#FF8DD2EF"
+                                      Progress="0"
+                                      Margin="20" />
+
+        <Button HorizontalAlignment="Center"
+                Margin="20"
+                Content="Run"
+                Click="RunTest_Click" />
+    </StackPanel>
+
+</Page>
